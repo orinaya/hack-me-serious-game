@@ -45,29 +45,16 @@
 }
 
 .icon-BookOpenText:before {
-  top: 0;
   content: "\e900";
 }
 .icon-CaretLeft:before {
   content: "\e901";
-}
-.icon-SortDescending:before {
-  content: "\e902";
-}
-.icon-SortAscending:before {
-  content: "\e903";
 }
 .icon-Bug:before {
   content: "\e904";
 }
 .icon-CaretDown:before {
   content: "\e905";
-}
-.icon-Detective:before {
-  content: "\e906";
-}
-.icon-Password:before {
-  content: "\e907";
 }
 .icon-Prohibit:before {
   content: "\e908";
