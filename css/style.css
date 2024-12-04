@@ -123,26 +123,32 @@ header {
   }
 }
 
-.icon-Bug:before {
+.icon-SortDescending:before {
   content: "\e900";
 }
-.icon-CaretDown:before {
+.icon-SortAscending:before {
   content: "\e901";
 }
-.icon-Detective:before {
+.icon-Bug:before {
   content: "\e902";
 }
-.icon-Password:before {
+.icon-CaretDown:before {
   content: "\e903";
 }
-.icon-Prohibit:before {
+.icon-Detective:before {
   content: "\e904";
 }
-.icon-ShieldCheck:before {
+.icon-Password:before {
   content: "\e905";
 }
-.icon-SquaresFour:before {
+.icon-Prohibit:before {
   content: "\e906";
+}
+.icon-ShieldCheck:before {
+  content: "\e907";
+}
+.icon-SquaresFour:before {
+  content: "\e908";
 }
 
 #filters {
@@ -272,4 +278,8 @@ button,
     display: flex;
     flex-direction: column;
   }
+}
+
+.flip-box:hover {
+  transition: 250ms;
 }
