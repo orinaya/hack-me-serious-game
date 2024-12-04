@@ -3,16 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>HACK.ME</title>
   </head>
   <body>
-    <h1>Coucou test hébergement</h1>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
-    <h2></h2>
+    <header>
+      <h1>HACK.ME</h1>
+      <h2>Discover and learn more about the deck</h2>
+    </header>
+    <div class="container" id="filters">
+      <div id="filters_cards">
+        <button type="button" class="glow-on-hover"><span class="icon-SquaresFour"></span>All cards</button>
+        <button type="button" class="glow-on-hover"><span class="icon-Detective"></span>Specialists</button>
+        <button type="button" class="glow-on-hover"><span class="icon-Bug"></span>Attack cards</button>
+        <button type="button" class="glow-on-hover"><span class="icon-Prohibit"></span>Penalty cards</button>
+        <button type="button" class="glow-on-hover"><span class="icon-ShieldCheck"></span>Bonus cards</button>
+        <button type="button" class="glow-on-hover"><span class="icon-Password"></span>Password cards</button>
+      </div>
+      <div id="filters_sort">
+        <span>74 results</span>
+        <select id="sort">
+          <option value="default">Sort by</option>
+          <option value="name_asc">Name ASC</option>
+        </select>
+      </div>
+    </div>
 
-    <!-- supp later -->
-    <a href="CGU.html">Rapid CGU link</a>
+    <div id="card-container" class="container"></div>
+
+    <script src="/js/script.js" type="text/javascript"></script>
   </body>
 </html>
