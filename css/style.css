@@ -95,8 +95,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 3rem;
+  line-height: 3rem;
 
   @media (max-width: 760px) {
     font-size: 1.875rem;
@@ -116,11 +116,25 @@ header {
   padding: 40px;
   margin-top: 20px;
   border-radius: 30px;
+  background-image: url("/assets/images/header-background.jpg");
+  background-size: cover;
+  background-position: top;
+  gap: 40px;
 
   @media (max-width: 760px) {
     max-width: 80%;
     margin: 20px;
   }
+}
+
+#header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+#header-content_title {
+  max-width: 34%;
 }
 
 .icon-SortDescending:before {
