@@ -221,10 +221,11 @@ button,
 
 .flip-box {
   background-color: transparent;
-  width: 226px;
-  height: 315px;
+  width: 249px;
+  height: 335px;
   perspective: 1000px;
   margin: 16px auto;
+  flex: 0 1 calc(20% - 1em);
 }
 
 .flip-box-inner {
@@ -273,7 +274,8 @@ button,
 #card-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: space-between;
+
   @media (max-width: 760px) {
     display: flex;
     flex-direction: column;
@@ -282,4 +284,9 @@ button,
 
 .flip-box:hover {
   transition: 250ms;
+}
+
+.flip-box-back_title {
+  font-size: 2rem;
+  font-family: "Manufaktur-Black";
 }
