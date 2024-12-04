@@ -173,30 +173,75 @@ var cardsData = [
   },
 ];
 
-function flipCard(element) {
-  element.classList.toggle("flipped");
-}
+// function flipCard(element) {
+//   element.classList.toggle("flipped");
+// }
 
 var cardContainer = document.getElementById("card-container");
 
-for (var i = 0; i < cardsData.length; i++) {
-  var flipBox = document.createElement("div");
-  flipBox.classList.add("flip-box");
-  flipBox.setAttribute("onclick", "flipCard(this)");
+function selectedCategory(btn) {
+  if (btn.classList === "btn") {
+    btn.classList.toggle("focus-btn");
+  } else {
+    btn.classList.toggle("btn");
+  }
+}
 
-  flipBox.innerHTML = `
-  <div class="flip-box-inner">
-    <div class="flip-box-front">
-      <img src="/assets/images/${cardsData[i].img}.png" alt="${cardsData[i].alt}" />
+var selector = document.getElementById("sort");
+
+function compareStrings(a, b) {
+  return a.backside_title.localeCompare(b.backside_title);
+}
+
+const cardsList = document.getElementById("card-container");
+function filterByCategory() {
+  var selectedCategory = document.getElementById("filters_sort").value;
+
+  if (selectedCategory === "all") {
+    createListCards(cardsData);
+  } else {
+    var filteredByCategory = cardsData.filter((card) => card.category === selectedCategory);
+    cardsList.innerHTML = "";
+    createListCards(filteredByCategory);
+  }
+}
+
+selector.addEventListener("change", function () {
+  var sorteredList = cardsData;
+
+  switch (selector.value) {
+    case "name_asc":
+      sorteredList = cardsData.sort(compareStrings);
+      break;
+    case "name_desc":
+      sorteredList = cardsData.sort(compareStrings).reverse();
+      break;
+  }
+  cardsList.innerHTML = "";
+  createListCards(sorteredList);
+});
+
+function createListCards(list) {
+  document.getElementById("resultNumber").textContent = list.length;
+  for (var i = 0; i < list.length; i++) {
+    flipBox = document.createElement("div");
+    flipBox.classList.add("flip-card");
+    // flipBox.setAttribute("onclick", "flipCard(this)");
+
+    flipBox.innerHTML = `
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/assets/images/${list[i].img}.png" alt="${list[i].alt}" />
     </div>
-    <div class="flip-box-back">
-      <h2 class="flip-box-back_title">${cardsData[i].backside_title}</h2>
-      <p>${cardsData[i].backside_description}</p>
+    <div class="flip-card-back">
+      <h2 class="flip-card-back_title">${list[i].backside_title}</h2>
+      <p>${list[i].backside_description}</p>
     </div>
   </div>
 `;
 
-  cardContainer.appendChild(flipBox);
+    cardContainer.appendChild(flipBox);
+  }
 }
 
-//filter
+createListCards(cardsData);

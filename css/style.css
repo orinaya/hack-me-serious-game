@@ -177,7 +177,7 @@ header {
   }
 }
 
-#filters_cards {
+#filters_button {
   display: flex;
   gap: 16px;
   justify-items: flex-start;
@@ -228,18 +228,24 @@ button,
   }
 }
 
-.focus {
+.focus-btn {
   background-color: var(--black-100);
   color: var(--white-1000);
 }
 
-.flip-box {
+/* .flip-box {
   background-color: transparent;
   width: 249px;
   height: 335px;
   perspective: 1000px;
   margin: 16px auto;
   flex: 0 1 calc(20% - 1em);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    transform: scale(1.06);
+  }
 
   @media (max-width: 760px) {
     display: flex;
@@ -257,7 +263,10 @@ button,
   transform-style: preserve-3d;
 }
 
-.flip-box.flipped .flip-box-inner {
+.flip-box.flipped:hover {
+  transform: rotateY(180deg);
+}
+.flip-box-inner:hover {
   transform: rotateY(180deg);
 }
 
@@ -291,6 +300,16 @@ button,
   flex-direction: column;
 }
 
+
+.flip-box:hover {
+  transition: 250ms;
+}
+
+.flip-box-back_title {
+  font-size: 2rem;
+  font-family: "Manufaktur-Black";
+} */
+
 #card-container {
   display: flex;
   flex-wrap: wrap;
@@ -302,11 +321,70 @@ button,
   }
 }
 
-.flip-box:hover {
-  transition: 250ms;
+.flip-card {
+  background-color: transparent;
+  width: 249px;
+  height: 335px;
+  border: none;
+  perspective: 1000px;
+  margin: 16px auto;
+  flex: 0 1 calc(20% - 1em);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    transform: scale(1.06);
+  }
+
+  @media (max-width: 760px) {
+    display: flex;
+    flex-direction: column;
+    flex: none;
+  }
 }
 
-.flip-box-back_title {
-  font-size: 2rem;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.flip-card-back {
+  background-color: #373736;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.flip-card-back_title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   font-family: "Manufaktur-Black";
 }
