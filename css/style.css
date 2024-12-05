@@ -311,6 +311,10 @@ button,
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+
+  @media only screen and (max-width: 980px) {
+    transform: none;
+  }
 }
 
 .flip-card-front,
@@ -345,6 +349,7 @@ button,
 
   @media only screen and (max-width: 980px) {
     display: none;
+    transform: none;
   }
 }
 
