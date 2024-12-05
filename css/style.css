@@ -177,7 +177,7 @@ header {
   justify-content: space-between;
   gap: 16px;
   align-items: center;
-  margin-top: 64px;
+  margin-top: 48px;
   @media (max-width: 760px) {
     flex-direction: column;
     margin-top: 28px;
@@ -236,6 +236,11 @@ button,
   }
 }
 
+.active-category {
+  background-color: var(--black-100);
+  color: var(--white-1000);
+}
+
 .link-button {
   background-color: hsl(193, 64%, 67%);
   font-weight: 500;
@@ -257,26 +262,22 @@ button,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  @media (max-width: 760px) {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .flip-card {
   background-color: transparent;
-  width: 249px;
-  height: 335px;
+  min-width: 249px;
+  min-height: 347px;
   border: none;
   perspective: 1000px;
-  margin: 16px auto;
+  margin: 4px auto;
   flex: 0 1 calc(20% - 1em);
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
-    transform: scale(1.06);
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.06)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.6));
+    transform: scale(1.04);
+    z-index: 1;
   }
 
   @media (max-width: 760px) {
@@ -330,4 +331,44 @@ button,
   font-size: 1.5rem;
   line-height: 1.75rem;
   font-family: "Manufaktur-Black";
+}
+
+#searchbar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  padding: 10px 100px 10px 10px;
+  border-radius: 20px;
+  border: 1px solid rgb(197, 197, 197);
+  height: 20px;
+  margin-top: 48px;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 980px) {
+  .header .header-content .header-right .header-searchbar {
+    display: none;
+  }
+}
+
+.header-searchbar {
+  position: relative;
+}
+
+.header-searchbar #searchbar {
+  position: relative;
+}
+.header-searchbar .searchbar-icon {
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  height: 15px;
+}
+@media only screen and (max-width: 980px) {
+  .header-searchbar {
+    display: none;
+  }
 }

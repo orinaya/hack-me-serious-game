@@ -11,23 +11,47 @@
       <div class="header-content">
         <h1>HACK.ME</h1>
         <h2 id="header-content_title">Discover and learn more about the deck</h2>
-        <a href="/TCU.html" class="button link-button"
-          ><span class="icon-BookOpenText"></span>Read Terms & Conditions</a
+        <a href="/terms-and-conditions.html" class="button link-button btn"
+          ><span class="icon-BookOpenText"></span>Read TCU</a
         >
       </div>
     </header>
+    <div class="header-searchbar">
+      <input type="text" id="searchbar" placeholder="Rechercher..." />
+    </div>
+
     <div class="container" id="filters">
       <div id="filters_button">
-        <button type="button" class="btn" onclick="selectedCategory(this)">
+        <button
+          type="button"
+          class="category-button btn active-category"
+          data-category="all"
+          onclick="filterByCategory('all')"
+        >
           <span class="icon-SquaresFour"></span>All cards
         </button>
-        <button type="button" class="glow-on-hover" onclick="selectedCategory(this)">
+        <button
+          type="button"
+          class="category-button btn"
+          data-category="attack"
+          onclick="filterByCategory('attack')"
+        >
           <span class="icon-Bug"></span>Attack cards
         </button>
-        <button type="button" class="glow-on-hover">
+        <button
+          type="button"
+          class="category-button btn"
+          data-category="bonus"
+          onclick="filterByCategory('penalty')"
+        >
           <span class="icon-Prohibit"></span>Penalty cards
         </button>
-        <button type="button" class="glow-on-hover">
+        <button
+          type="button"
+          class="category-button btn"
+          data-category="penalty"
+          onclick="filterByCategory('bonus')"
+        >
           <span class="icon-ShieldCheck"></span>Bonus cards
         </button>
       </div>
