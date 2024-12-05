@@ -157,10 +157,12 @@ header {
 }
 
 #header-content_title {
-  max-width: 34%;
+  max-width: 46%;
+  min-width: 34%;
+  height: 100%;
 
   @media (max-width: 760px) {
-    max-width: 80%;
+    max-width: 88%;
   }
 }
 
@@ -463,5 +465,127 @@ button,
 
   .flip-card.tilt-shake {
     animation: tilt-shaking 0.5s ease-out;
+  }
+}
+
+@keyframes typing {
+  0% {
+    content: "a";
+  }
+  1.8182% {
+    content: "an";
+  }
+  3.6364% {
+    content: "and";
+  }
+  5.4545% {
+    content: "and ";
+  }
+  7.2727% {
+    content: "and b";
+  }
+  9.0909% {
+    content: "and be";
+  }
+  10.9091% {
+    content: "and bec";
+  }
+  12.7273% {
+    content: "and beco";
+  }
+  14.5455% {
+    content: "and becom";
+  }
+  16.3636% {
+    content: "and become";
+  }
+  18.1818% {
+    content: "and become ";
+  }
+  20% {
+    content: "and become a";
+  }
+  22% {
+    content: "and become a ";
+  }
+  24% {
+    content: "and become a s";
+  }
+  26% {
+    content: "and become a sp";
+  }
+  28% {
+    content: "and become a spe";
+  }
+  30% {
+    content: "and become a spec";
+  }
+  32% {
+    content: "and become a speci";
+  }
+  34% {
+    content: "and become a specia";
+  }
+  36% {
+    content: "and become a special";
+  }
+  38% {
+    content: "and become a speciali";
+  }
+  40% {
+    content: "and become a specialis";
+  }
+  42% {
+    content: "and become a specialist";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 4s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%,
+    100% {
+      content: "Learn more about the deck and become a specialist";
+    }
+  }
+
+  .typewriter::before {
+    content: "Learn more about the deck and become a specialist";
+    animation: sequencePopup 5s linear infinite;
   }
 }
