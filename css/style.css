@@ -259,9 +259,11 @@ button,
 }
 
 #card-container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
 
   @media (max-width: 760px) {
     display: grid;
@@ -278,6 +280,7 @@ button,
   margin: 4px auto;
   flex: 0 1 calc(20% - 1em);
   transition: all 0.2s ease-in-out;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.3));
 
   &:hover {
     filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.06)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.6));
@@ -384,5 +387,72 @@ button,
 @media only screen and (max-width: 980px) {
   .header-searchbar {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  #modal-img {
+    width: 76%;
+    height: auto;
+    border-radius: 10px;
+
+    display: block;
+    margin: 20% auto;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .modal-number {
+  }
+
+  @keyframes tilt-shaking {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(0eg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .flip-card.tilt-shake {
+    animation: tilt-shaking 0.5s ease-out;
   }
 }

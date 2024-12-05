@@ -194,15 +194,12 @@ var cardsData = [
 var cardsList = document.getElementById("card-container");
 var selector = document.getElementById("sort");
 var searchbar = document.getElementById("searchbar");
-
-// filter by category
-function filterByCategory(category) {
-  var filteredData = cardsData;
-  if (category !== "all") {
-    filteredData = cardsData.filter((card) => card.type === category);
-  }
-  createListCards(filteredData);
-}
+var categoryButtons = document.querySelectorAll(".category-button");
+var modal = document.getElementById("card-modal");
+var modalImg = document.getElementById("modal-img");
+var modalTitle = document.getElementById("modal-title");
+var modalDescription = document.getElementById("modal-description");
+var closeModal = document.querySelector(".modal-close");
 
 //searchbar
 searchbar.addEventListener("keyup", function () {
@@ -234,42 +231,77 @@ selector.addEventListener("change", function () {
   createListCards(sorteredList);
 });
 
-// loop card func
-function createListCards(card) {
+// filter by category
+function filterByCategory(category) {
+  var filteredData = cardsData;
+  if (category !== "all") {
+    filteredData = cardsData.filter((card) => card.type === category);
+  }
+  createListCards(filteredData);
+}
+
+// filter cat
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    categoryButtons.forEach((btn) => btn.classList.remove("active-category"));
+    event.target.classList.add("active-category");
+    filterByCategory(event.target.getAttribute("data-category"));
+  });
+});
+
+// mobile device modal
+function showModal(card) {
+  var modalShake = document.getElementById("modal-shake");
+
+  modalShake.classList.add("tilt-shake");
+  setTimeout(function () {
+    modal.style.display = "block";
+    modalImg.src = `/assets/images/${card.img}.png`;
+    modalImg.alt = card.alt;
+    modalTitle.textContent = card.backside_title;
+    modalDescription.textContent = card.backside_description;
+
+    modalShake.classList.remove("tilt-shake");
+  }, 500);
+}
+
+// loop func cards
+function createListCards(cards) {
   cardsList.innerHTML = "";
-  document.getElementById("resultNumber").textContent = card.length;
-  for (var i = 0; i < card.length; i++) {
-    flipBox = document.createElement("div");
+  document.getElementById("resultNumber").textContent = cards.length;
+
+  cards.forEach(function (card) {
+    let flipBox = document.createElement("div");
     flipBox.classList.add("flip-card");
+
     flipBox.innerHTML = `
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="/assets/images/${card[i].img}.png" alt="${card[i].alt}" />
+          <img src="/assets/images/${card.img}.png" alt="${card.alt}" />
         </div>
         <div class="flip-card-back">
-          <h2 class="flip-card-back_title">${card[i].backside_title}</h2>
-          <p>${card[i].backside_description}</p>
+          <h2 class="flip-card-back_title">${card.backside_title}</h2>
+          <p>${card.backside_description}</p>
         </div>
       </div>
     `;
+
+    flipBox.addEventListener("click", function () {
+      showModal(card);
+    });
+
     cardsList.appendChild(flipBox);
-  }
+  });
 }
+
+closeModal.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
 
 createListCards(cardsData);
-
-const categoryButtons = document.querySelectorAll(".category-button");
-
-function activateCategoryButton(event) {
-  categoryButtons.forEach((btn) => btn.classList.remove("active-category"));
-
-  const clickedButton = event.target;
-  clickedButton.classList.add("active-category");
-
-  const category = clickedButton.getAttribute("data-category");
-  filterByCategory(category);
-}
-
-categoryButtons.forEach((button) => {
-  button.addEventListener("click", activateCategoryButton);
-});

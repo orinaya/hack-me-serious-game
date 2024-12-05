@@ -41,7 +41,7 @@
         <button
           type="button"
           class="category-button btn"
-          data-category="bonus"
+          data-category="penalty"
           onclick="filterByCategory('penalty')"
         >
           <span class="icon-Prohibit"></span>Penalty cards
@@ -49,7 +49,7 @@
         <button
           type="button"
           class="category-button btn"
-          data-category="penalty"
+          data-category="bonus"
           onclick="filterByCategory('bonus')"
         >
           <span class="icon-ShieldCheck"></span>Bonus cards
@@ -66,6 +66,23 @@
     </div>
 
     <div id="card-container" class="container"></div>
+
+    <div id="card-modal" class="modal">
+      <img id="modal-img" src="" alt="" />
+      <div id="modal-shake" class="modal-content hid-box">
+        <span class="modal-close">&times;</span>
+        <span class="modal-number"><i class="icon-BookOpenText"></i>2</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="hid-box">
+        <h1>CSS3 slide up</h1>
+        <p>This is a quick demo of slide-up effect using CSS animation when hover the box. No JS required!</p>
+      </div>
+    </div>
 
     <script src="/js/script.js" type="text/javascript"></script>
   </body>
