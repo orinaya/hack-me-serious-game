@@ -287,6 +287,7 @@ function createListCards(cards) {
     `;
 
     flipBox.addEventListener("click", function () {
+      document.body.style.overflow = "hidden";
       showModal(card);
     });
 
@@ -296,11 +297,13 @@ function createListCards(cards) {
 
 closeModal.onclick = function () {
   modal.style.display = "none";
+  document.body.style.overflow = "";
 };
 
 window.onclick = function (event) {
   if (event.target === modal) {
     modal.style.display = "none";
+    document.body.style.overflow = "";
   }
 };
 
