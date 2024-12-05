@@ -262,6 +262,11 @@ button,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 760px) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }
 
 .flip-card {
@@ -284,6 +289,11 @@ button,
     display: flex;
     flex-direction: column;
     flex: none;
+    min-width: 97px;
+    min-height: 139px;
+    justify-content: center;
+    align-items: center;
+    margin: 2px auto;
   }
 }
 
@@ -314,6 +324,10 @@ button,
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+
+  @media (max-width: 760px) {
+    border-radius: 0px;
+  }
 }
 
 .flip-card-back {
