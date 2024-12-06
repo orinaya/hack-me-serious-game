@@ -218,7 +218,7 @@ var cardsData = [
   },
   {
     id: 26,
-    img: "systems-manager",
+    img: "Systems-manager",
     backside_title: "Systems Manager",
     backside_description: "Special ability",
     type: "specialist",
