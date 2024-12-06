@@ -128,10 +128,11 @@ h1 {
   }
 }
 
-h2 {
+.h2-title {
   font-size: 3rem;
   line-height: 3rem;
-
+}
+h2 {
   @media (max-width: 760px) {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -386,6 +387,34 @@ button {
   font-family: "Manufaktur-Black";
 }
 
+.modal-content {
+  background-color: #fff;
+  color: var(--black-100);
+  padding: 20px;
+  border-radius: 10px;
+  /* margin-left: auto;
+  margin-right: auto;
+  text-align: center; */
+}
+
+.modal-info {
+  display: flex;
+  gap: 12px;
+}
+
+#modal-number,
+#modal-dice {
+  font-family: "Roboto", sans-serif;
+  padding: 4px 16px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  gap: 12px;
+  border: solid 1px #9e9e9e;
+  align-items: center;
+}
+
 #searchbar {
   display: block;
   margin-left: auto;
@@ -426,6 +455,10 @@ button {
   }
 }
 
+.modal {
+  display: none;
+}
+
 @media only screen and (max-width: 980px) {
   .modal {
     display: none;
@@ -450,9 +483,7 @@ button {
     text-align: center;
     position: relative;
   }
-  .shining-card {
-    position: relative;
-  }
+
   #modal-img {
     width: 76%;
     height: auto;

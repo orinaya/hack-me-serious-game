@@ -380,9 +380,13 @@ function createListCards(cards) {
         <div class="flip-card-front">
           <img src="/assets/images/${card.img}.png" alt="${card.alt}" />
         </div>
-        <div class="flip-card-back">
-          <h2 class="flip-card-back_title">${card.backside_title}</h2>
-          <p>${card.backside_description}</p>
+        <div class="flip-card-back modal-content">
+            <div class="modal-info">
+              <div class="modal-number"><span class="icon-Card" id="modal-number">${card.number}</span></div>
+              <div class="modal-dice"><span class="icon-DiceFive" id="modal-dice">${card.dice}</span></div>
+            </div>
+            <h2 id="flip-card-back_title">${card.backside_title}</h2>
+            <p >${card.backside_description}</p>
         </div>
       </div>
     `;
