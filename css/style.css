@@ -46,12 +46,14 @@
 
 .icon-DiceFive:before {
   content: "\e905";
+  font-family: "Roboto";
 }
 .icon-XCircle:before {
   content: "\e909";
 }
 .icon-Card:before {
   content: "\e904";
+  font-family: "Roboto";
 }
 .icon-BookOpenText:before {
   content: "\e900";
