@@ -360,7 +360,7 @@ function showModal(card) {
     modalDescription.textContent = card.backside_description;
     modalDescription.textContent = card.backside_description;
     modalNumber.textContent = card.number;
-    modalDice.textContent = card.textContent;
+    modalDice.textContent = card.dice;
 
     modalShake.classList.remove("tilt-shake");
   }, 500);
