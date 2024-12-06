@@ -44,26 +44,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-DiceFive:before {
+  content: "\e905";
+}
+.icon-XCircle:before {
+  content: "\e909";
+}
+.icon-Card:before {
+  content: "\e904";
+}
 .icon-BookOpenText:before {
   content: "\e900";
 }
-.icon-CaretLeft:before {
+.icon-Bug:before {
   content: "\e901";
 }
-.icon-Bug:before {
-  content: "\e904";
-}
 .icon-CaretDown:before {
-  content: "\e905";
+  content: "\e902";
+}
+.icon-CaretLeft:before {
+  content: "\e903";
+}
+.icon-Detective:before {
+  content: "\e90a";
 }
 .icon-Prohibit:before {
-  content: "\e908";
+  content: "\e906";
 }
 .icon-ShieldCheck:before {
-  content: "\e909";
+  content: "\e907";
 }
 .icon-SquaresFour:before {
-  content: "\e90a";
+  content: "\e908";
 }
 
 :root {
@@ -197,6 +209,7 @@ header {
     align-items: center;
     gap: 6px;
     justify-content: center;
+    width: 100%;
   }
 }
 
@@ -205,6 +218,11 @@ header {
   gap: 16px;
   justify-items: flex-start;
   align-items: center;
+
+  @media (max-width: 760px) {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 #sort {
@@ -214,8 +232,7 @@ header {
   background-color: white;
 }
 
-button,
-.button {
+button {
   font-weight: 400;
   font-size: 16px;
   background-color: var(--white-1000);
@@ -227,7 +244,7 @@ button,
   border-radius: 7px;
   height: 40px;
   width: fit-content;
-  padding: 4px 16px;
+  padding: 4px 10px;
   gap: 10px;
   text-decoration: none;
 
@@ -247,6 +264,17 @@ button,
   background-color: hsl(193, 64%, 67%);
   font-weight: 500;
   color: hsl(193, 64%, 20%);
+  font-size: 16px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  height: 40px;
+  width: fit-content;
+  padding: 4px 16px;
+  gap: 10px;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -261,9 +289,6 @@ button,
 }
 
 #card-container {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: auto auto auto auto auto;
 
@@ -414,6 +439,21 @@ button,
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+  /* .shine {
+    position: absolute;
+    top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 60%);
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    left: 12%;
+    right: 50%;
+    border-radius: 27px;
+  } */
+
   .modal-content {
     background-color: #fff;
     padding: 20px;
@@ -421,15 +461,19 @@ button,
     width: 90%;
     max-width: 500px;
     text-align: center;
+    position: relative;
   }
-
+  .shining-card {
+    position: relative;
+  }
   #modal-img {
     width: 76%;
     height: auto;
     border-radius: 10px;
-
     display: block;
     margin: 20% auto;
+    margin-bottom: 32px;
+    position: relative;
   }
 
   .modal-close {
@@ -442,7 +486,24 @@ button,
     cursor: pointer;
   }
 
+  .modal-info {
+    display: flex;
+    gap: 12px;
+  }
+
+  /* #modal-title { 
+     margin: 32px;
+  } */
+
   .modal-number {
+    padding: 4px 16px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 12px;
+    border: solid 1px #9e9e9e;
+    align-items: center;
   }
 
   @keyframes tilt-shaking {
@@ -453,7 +514,7 @@ button,
       transform: rotate(5deg);
     }
     50% {
-      transform: rotate(0eg);
+      transform: rotate(0deg);
     }
     75% {
       transform: rotate(-5deg);

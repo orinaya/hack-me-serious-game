@@ -188,6 +188,48 @@ var cardsData = [
       "A VPN encrypts your internet connection and protects your privacy. Use a VPN when browsing or accessing sensitive information on public networks to keep your data secure.",
     type: "bonus",
   },
+  {
+    id: 22,
+    img: "ethical-hacker",
+    backside_title: "Ethical Hacker",
+    backside_description: "Special ability",
+    type: "specialist",
+  },
+  {
+    id: 23,
+    img: "threat-analyst",
+    backside_title: "Threat Analyst",
+    backside_description: "Special ability",
+    type: "specialist",
+  },
+  {
+    id: 24,
+    img: "engineer-threat",
+    backside_title: "Engineer Threat",
+    backside_description: "Special ability",
+    type: "specialist",
+  },
+  {
+    id: 25,
+    img: "the-trainer",
+    backside_title: "The Trainer",
+    backside_description: "Special ability",
+    type: "specialist",
+  },
+  {
+    id: 26,
+    img: "systems-manager",
+    backside_title: "Systems Manager",
+    backside_description: "Special ability",
+    type: "specialist",
+  },
+  {
+    id: 27,
+    img: "cryptologue",
+    backside_title: "Cryptologue",
+    backside_description: "Special ability",
+    type: "specialist",
+  },
 ];
 
 // variable
@@ -308,3 +350,32 @@ window.onclick = function (event) {
 };
 
 createListCards(cardsData);
+
+var $poster = $(".poster"),
+  $shine = $(".shine"),
+  $layer = $('div[class*="layer-"]'),
+  w = $(window).width(), //window width
+  h = $(window).height(); //window height
+
+$(window).on("mousemove", function (e) {
+  var offsetX = 0.5 - e.pageX / w, //cursor position X
+    offsetY = 0.5 - e.pageY / h, //cursor position Y
+    dy = e.pageY - h / 2, //@h/2 = center of poster
+    dx = e.pageX - w / 2, //@w/2 = center of poster
+    theta = Math.atan2(dy, dx), //angle between cursor and center of poster in RAD
+    angle = (theta * 180) / Math.PI - 90, //convert rad in degrees
+    offsetPoster = $poster.data("offset"),
+    transformPoster =
+      "translateY(" +
+      -offsetX * offsetPoster +
+      "px) rotateX(" +
+      -offsetY * offsetPoster +
+      "deg) rotateY(" +
+      offsetX * (offsetPoster * 2) +
+      "deg)"; //poster transform
+
+  //get angle between 0-360
+  if (angle < 0) {
+    angle = angle + 360;
+  }
+});
