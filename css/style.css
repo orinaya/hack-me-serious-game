@@ -405,7 +405,7 @@ button {
 #modal-number,
 #modal-dice {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   padding: 4px 16px;
   border-radius: 30px;
   display: flex;
