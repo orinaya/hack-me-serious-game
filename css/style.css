@@ -483,6 +483,10 @@ button {
   } */
 
   .modal-number {
+  }
+
+  #modal-number {
+    font-family: "Roboto", sans-serif;
     padding: 4px 16px;
     border-radius: 30px;
     display: flex;

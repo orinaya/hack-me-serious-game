@@ -7,6 +7,8 @@ var cardsData = [
     backside_description:
       "Antivirus software is essential for defending against malware that can compromise your personal information. Regularly update your antivirus to protect your system from new threats.",
     type: "bonus",
+    number: "2",
+    dice: "+8",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ var cardsData = [
     backside_description:
       "Be very careful when opening email attachments, especially from unknown senders. These files can contain viruses, malware, or phishing attempts designed to steal your data.",
     type: "attack",
+    number: "5",
+    dice: "No dice",
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ var cardsData = [
     backside_description:
       "Weak passwords are an easy target for hackers. Always use a combination of uppercase and lowercase letters, numbers, and special characters. Never reuse passwords across different accounts.",
     type: "penalty",
+    number: "4",
+    dice: "+8",
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ var cardsData = [
     backside_description:
       "Bankruptcy can lead to the loss of access to your assets. Make sure your financial data is securely stored and only share sensitive information with trusted entities.",
     type: "penalty",
+    number: "4",
+    dice: "+5",
   },
   {
     id: 5,
@@ -43,6 +51,8 @@ var cardsData = [
     backside_description:
       "Data thieves can steal your personal information, leading to identity theft and fraud. Use encryption and strong passwords to protect sensitive data from unauthorized access.",
     type: "bonus",
+    number: "4",
+    dice: "+5",
   },
   {
     id: 6,
@@ -52,6 +62,8 @@ var cardsData = [
     backside_description:
       "Deepfake technology allows attackers to create convincing fake videos or audios of you. Be cautious when sharing personal media online, and verify the source of any media you receive.",
     type: "penalty",
+    number: "3",
+    dice: "+6",
   },
   {
     id: 7,
@@ -61,6 +73,8 @@ var cardsData = [
     backside_description:
       "Cybercriminals can damage your reputation by altering your online content or impersonating you. Always monitor your digital presence and secure your accounts with strong protections.",
     type: "penalty",
+    number: "3",
+    dice: "+7",
   },
   {
     id: 8,
@@ -70,6 +84,8 @@ var cardsData = [
     backside_description:
       "Just like a '404 error' in the digital world, this card gives you temporary immunity. Use it wisely when you anticipate a serious attack on your passwords or accounts.",
     type: "attack",
+    number: "2",
+    dice: "No dice",
   },
   {
     id: 9,
@@ -79,6 +95,8 @@ var cardsData = [
     backside_description:
       "Executable files (.exe) can contain harmful software that may damage your system or steal your data. Always verify the source before opening any executable file, especially if it’s from an unknown sender.",
     type: "attack",
+    number: "5",
+    dice: "No dice",
   },
   {
     id: 10,
@@ -88,6 +106,8 @@ var cardsData = [
     backside_description:
       "A firewall acts as a barrier between your device and the internet. Make sure your firewall is activated to prevent unauthorized access to your network and personal data.",
     type: "bonus",
+    number: "4",
+    dice: "+5",
   },
   {
     id: 11,
@@ -97,6 +117,8 @@ var cardsData = [
     backside_description:
       "Phishing emails often look legitimate but are designed to steal your personal information, such as passwords or credit card numbers. Always verify the sender and never click on suspicious links.",
     type: "penalty",
+    number: "4",
+    dice: "+6",
   },
   {
     id: 12,
@@ -106,6 +128,8 @@ var cardsData = [
     backside_description:
       "Public Wi-Fi is convenient but insecure. Avoid accessing sensitive accounts or banking information when connected to public networks. Use a VPN for added security.",
     type: "penalty",
+    number: "4",
+    dice: "+6",
   },
   {
     id: 13,
@@ -115,6 +139,8 @@ var cardsData = [
     backside_description:
       "Ransomware encrypts your files and demands a ransom for their release. Protect your data with regular backups and up-to-date security software to minimize the risk.",
     type: "penalty",
+    number: "4",
+    dice: "+5",
   },
   {
     id: 14,
@@ -124,6 +150,8 @@ var cardsData = [
     backside_description:
       "Regular software updates patch security holes that could be exploited by hackers. Always install updates for your operating system and applications to maintain your system's security.",
     type: "bonus",
+    number: "2",
+    dice: "+6",
   },
   {
     id: 15,
@@ -133,6 +161,8 @@ var cardsData = [
     backside_description:
       "A strong password is your first line of defense. Use a mix of characters and enable multi-factor authentication (MFA) to secure your accounts against unauthorized access.",
     type: "bonus",
+    number: "4",
+    dice: "+8",
   },
   {
     id: 16,
@@ -142,6 +172,8 @@ var cardsData = [
     backside_description:
       "Terms and conditions can contain hidden clauses that compromise your privacy. Always read them carefully before agreeing, and be mindful of any data you might be agreeing to share.",
     type: "penalty",
+    number: "3",
+    dice: "+5",
   },
   {
     id: 17,
@@ -151,6 +183,8 @@ var cardsData = [
     backside_description:
       "If a device is compromised, it may betray you. Always ensure that your devices are secure and use trusted sources for software and hardware.",
     type: "bonus",
+    number: "3",
+    dice: "+7",
   },
   {
     id: 18,
@@ -160,6 +194,8 @@ var cardsData = [
     backside_description:
       "A Trojan horse may look like a useful program, but it secretly harms your system. Always download software from official sources and verify the integrity of files before running them.",
     type: "attack",
+    number: "5",
+    dice: "No dice",
   },
   {
     id: 19,
@@ -169,6 +205,8 @@ var cardsData = [
     backside_description:
       "Two-factor authentication (2FA) is one of the best ways to secure your accounts. Even if your password is compromised, the second factor will protect you from unauthorized access.",
     type: "bonus",
+    number: "4",
+    dice: "+6",
   },
   {
     id: 20,
@@ -178,6 +216,8 @@ var cardsData = [
     backside_description:
       "USB keys are convenient but can carry malware. Always scan them for threats before plugging them into your computer, especially if they were not from a trusted source.",
     type: "attack",
+    number: "5",
+    dice: "NO dice",
   },
   {
     id: 21,
@@ -187,6 +227,8 @@ var cardsData = [
     backside_description:
       "A VPN encrypts your internet connection and protects your privacy. Use a VPN when browsing or accessing sensitive information on public networks to keep your data secure.",
     type: "bonus",
+    number: "5",
+    dice: "+6",
   },
   {
     id: 22,
@@ -194,6 +236,8 @@ var cardsData = [
     backside_title: "Ethical Hacker",
     backside_description: "Special ability",
     type: "specialist",
+    number: "1",
+    dice: "+8",
   },
   {
     id: 23,
@@ -201,6 +245,8 @@ var cardsData = [
     backside_title: "Threat Analyst",
     backside_description: "Special ability",
     type: "specialist",
+    number: "1",
+    dice: "+5",
   },
   {
     id: 24,
@@ -208,6 +254,8 @@ var cardsData = [
     backside_title: "Engineer Threat",
     backside_description: "Special ability",
     type: "specialist",
+    number: "1",
+    dice: "+8",
   },
   {
     id: 25,
@@ -215,6 +263,8 @@ var cardsData = [
     backside_title: "The Trainer",
     backside_description: "Special ability",
     type: "specialist",
+    number: "1",
+    dice: "+6",
   },
   {
     id: 26,
@@ -222,6 +272,8 @@ var cardsData = [
     backside_title: "Systems Manager",
     backside_description: "Special ability",
     type: "specialist",
+    number: "1",
+    dice: "+7",
   },
   {
     id: 27,
@@ -229,6 +281,8 @@ var cardsData = [
     backside_title: "Cryptologue",
     backside_description: "Special ability",
     type: "specialist",
+    number: "1",
+    dice: "+7",
   },
 ];
 
@@ -241,6 +295,8 @@ var modal = document.getElementById("card-modal");
 var modalImg = document.getElementById("modal-img");
 var modalTitle = document.getElementById("modal-title");
 var modalDescription = document.getElementById("modal-description");
+var modalNumber = document.getElementById("modal-number");
+var modalDice = document.getElementById("modal-dice");
 var closeModal = document.querySelector(".modal-close");
 
 //searchbar
@@ -302,6 +358,9 @@ function showModal(card) {
     modalImg.alt = card.alt;
     modalTitle.textContent = card.backside_title;
     modalDescription.textContent = card.backside_description;
+    modalDescription.textContent = card.backside_description;
+    modalNumber.textContent = card.number;
+    modalDice.textContent = card.textContent;
 
     modalShake.classList.remove("tilt-shake");
   }, 500);
