@@ -10,18 +10,15 @@
     <header>
       <div class="header-content">
         <h1>HACK.ME</h1>
-        <!-- <h2 id="header-content_title" class="typewriter">
-          Learn more about the deck and become a specialist
-        </h2> -->
 
         <h2 id="header-content_title" aria-label="Learn more about the deck and become a specialist">
           Learn more about the deck
           <span class="typewriter text-melon-700 font-black lg:text-5xl text-3xl"></span>
         </h2>
 
-        <a href="/terms-and-conditions.html" class="button link-button btn"
-          ><span class="icon-BookOpenText"></span>Read TCU</a
-        >
+        <a href="/terms-and-conditions.html" class="button link-button">
+          <span class="icon-BookOpenText"></span>Read T&C
+        </a>
       </div>
     </header>
     <div class="header-searchbar">
@@ -62,6 +59,14 @@
         >
           <span class="icon-ShieldCheck"></span>Bonus cards
         </button>
+        <button
+          type="button"
+          class="category-button btn"
+          data-category="specialist"
+          onclick="filterByCategory('specialist')"
+        >
+          <span class="icon-Detective"></span>Specialists
+        </button>
       </div>
       <div id="filters_sort">
         <p id="resultCount"><span id="resultNumber"></span> results</p>
@@ -76,19 +81,19 @@
     <div id="card-container" class="container"></div>
 
     <div id="card-modal" class="modal">
-      <img id="modal-img" src="" alt="" />
-      <div id="modal-shake" class="modal-content hid-box">
-        <span class="modal-close">&times;</span>
-        <span class="modal-number"><i class="icon-BookOpenText"></i>2</span>
+      <div class="shining-card">
+        <img id="modal-img" src="" alt="" />
+        <span class="shine"></span>
+      </div>
+
+      <div id="modal-shake" class="modal-content">
+        <span class="modal-close icon-XCircle"></span>
+        <div class="modal-info">
+          <span class="modal-number"><i class="icon-Card"></i>2</span>
+          <span class="modal-number"><i class="icon-DiceFive"></i>+8</span>
+        </div>
         <h2 id="modal-title"></h2>
         <p id="modal-description"></p>
-      </div>
-    </div>
-
-    <div class="modal">
-      <div class="hid-box">
-        <h1>CSS3 slide up</h1>
-        <p>This is a quick demo of slide-up effect using CSS animation when hover the box. No JS required!</p>
       </div>
     </div>
 
