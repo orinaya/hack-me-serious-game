@@ -482,10 +482,8 @@ button {
      margin: 32px;
   } */
 
-  .modal-number {
-  }
-
-  #modal-number {
+  #modal-number,
+  #modal-dice {
     font-family: "Roboto", sans-serif;
     padding: 4px 16px;
     border-radius: 30px;
