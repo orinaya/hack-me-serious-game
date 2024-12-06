@@ -19,7 +19,7 @@ var cardsData = [
       "Be very careful when opening email attachments, especially from unknown senders. These files can contain viruses, malware, or phishing attempts designed to steal your data.",
     type: "attack",
     number: "5",
-    dice: "No dice",
+    dice: "0",
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ var cardsData = [
       "Just like a '404 error' in the digital world, this card gives you temporary immunity. Use it wisely when you anticipate a serious attack on your passwords or accounts.",
     type: "attack",
     number: "2",
-    dice: "No dice",
+    dice: "0",
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ var cardsData = [
       "Executable files (.exe) can contain harmful software that may damage your system or steal your data. Always verify the source before opening any executable file, especially if it’s from an unknown sender.",
     type: "attack",
     number: "5",
-    dice: "No dice",
+    dice: "0",
   },
   {
     id: 10,
@@ -195,7 +195,7 @@ var cardsData = [
       "A Trojan horse may look like a useful program, but it secretly harms your system. Always download software from official sources and verify the integrity of files before running them.",
     type: "attack",
     number: "5",
-    dice: "No dice",
+    dice: "0",
   },
   {
     id: 19,
@@ -217,7 +217,7 @@ var cardsData = [
       "USB keys are convenient but can carry malware. Always scan them for threats before plugging them into your computer, especially if they were not from a trusted source.",
     type: "attack",
     number: "5",
-    dice: "NO dice",
+    dice: "0",
   },
   {
     id: 21,
